@@ -45,6 +45,7 @@
 }
 .movie-bottom{
     padding-left: 10px;
+    margin-top: -5px;
 }
 .movie-bottom__title{
     font-size: 17px;
@@ -59,7 +60,6 @@
 .movie-bottom__secondary{
     font-size: 14px;
     color: #777;
-    margin-top: 5px;
 }
 .movie-bottom__secondary:hover{
     color: #777;
@@ -92,7 +92,7 @@
     font-weight: 600;
 }
 .container{
-    max-width: 100%;
+    max-width: 1300px;
     width: 100%;
 }
 .movie-list__large::before{

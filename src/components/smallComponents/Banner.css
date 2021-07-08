@@ -53,13 +53,17 @@
 .original-title:hover{
     color: #fff;
 }
+.banner-bottom{
+    padding-left: 5px;
+}
 .slick-dots{
-    max-width: 1140px;
-    left: 0px;
+    max-width: 1300px;
     margin: auto;
     right: 0px;
+    left: 0px;
+    height: 0px;
     text-align: right;
-    bottom: 60px
+    bottom: 85px
 }
 .slick-dots li{
     background: hsla(0,0%,100%,.6);

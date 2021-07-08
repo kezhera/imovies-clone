@@ -1,10 +1,25 @@
-import React from 'react'
+import React , { useState , useEffect } from 'react';
 import Logo from '../../img/logo.svg'
 import loop from '../../img/loop.svg'
 import georgiaIMG from '../../img/georgia.png'
 import englishIMG from '../../img/english.png'
+import axios from '../../axios';
+import request from '../../request'
 import './Header.css'
 function Header() {
+
+    const [movies, setMovies] = useState([])
+
+    useEffect( () => {
+        async function fetchData() {
+            const requests = await axios.get(request?.searchMovies);
+            setMovies(requests.data.results)
+            return requests;
+            console.log(requests)
+        }
+        fetchData();
+    } , [] );
+    
     return (
         <header className="header">
             <div className="container h-100">
