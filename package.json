@@ -7,12 +7,17 @@
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
+    "bootstrap": "^5.1.1",
     "bpg-ingiri-arial": "^1.0.1",
     "react": "^17.0.2",
+    "react-bootstrap": "^2.0.0-rc.0",
     "react-dom": "^17.0.2",
+    "react-inlinesvg": "^2.3.0",
+    "react-router-dom": "^5.3.0",
     "react-scripts": "4.0.3",
     "react-slick": "^0.28.1",
     "slick-carousel": "^1.8.1",
+    "styled-components": "^5.3.1",
     "web-vitals": "^1.1.1"
   },
   "scripts": {

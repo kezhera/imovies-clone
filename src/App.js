@@ -1,30 +1,49 @@
-import './App.css';
-import './index.css';
-import Footer from './components/bigComponents/Footer';
-import Header from './components/bigComponents/Header';
-import MovieList from './components/bigComponents/MovieList';
-import Banner from './components/smallComponents/Banner';
-import Popular from './components/smallComponents/Popular';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 import request from './request';
-import Img from './img/cola-banner.png'
-import demonslayerIMG from './img/demonslayer.webp'
-import banner2 from './img/banner2.svg'
+import Banner from "./components/Banner";
+import Header from "./components/Header";
+import MovieList from "./components/MovieList";
+import MovieSection from "./components/MovieSection/MovieSection";
+
 function App() {
   return (
-    <div className="app">
-      <Header />
-      <main className="content">
-        <Banner />
-        <MovieList movieType={request?.fetchUpcoming} blockTitle="Soon Add" slideNum={4}/>
-        <MovieList movieType={request?.fetchRomanceMovies} blockTitle="Romance Movies" bgImage={Img} slideNum={3} large pl370 dark/>
-        <MovieList movieType={request?.fetchDocumentaries} blockTitle="Documentaries Movies" slideNum={4}/>
-        <MovieList movieType={request?.fetchHorrorMovies} blockTitle="New Episodes" bgImage={demonslayerIMG} slideNum={3} large pl370 whiteTxt/>
-        <Popular />
-        <MovieList movieType={request?.fetchUpcoming} blockTitle="Horror Movies" bgImage={banner2} slideNum={4} large/>
-        <MovieList movieType={request?.fetchComedyMovies} blockTitle="Comedy Movies" slideNum={4}/>
-      </main>
-      <Footer />
-    </div>
+    <main className="application">
+      <Router>
+        <Switch>
+          <Route path="/" exact>
+            <Header />
+            <Banner />
+            <MovieList movieType={request?.fetchUpcoming} blockTitle="Soon Add" slideNum={4} />
+            <MovieList movieType={request?.fetchRomanceMovies} blockTitle="Romance Movies" bgImage={'./img/cola-banner.png'} slideNum={3} large pl370 dark/>
+            <MovieList movieType={request?.fetchDocumentaries} blockTitle="Documentaries Movies" slideNum={4}/>
+            <MovieList movieType={request?.fetchHorrorMovies} blockTitle="New Episodes" bgImage={'./img/demonslayer.webp'} slideNum={3} large pl370 whiteTxt/>
+            {/* page structure */}
+            <MovieSection movieType={request?.fetchPopular} numberMovies={12} />
+            <MovieList movieType={request?.fetchUpcoming} blockTitle="Horror Movies" bgImage={'./img/banner2.svg'} slideNum={4} large/>
+            <MovieList movieType={request?.fetchComedyMovies} blockTitle="Comedy Movies" slideNum={4}/>
+          </Route>
+
+          {/* <Route path="/" exact>
+            <Header />
+            <section className="content">
+              <Banner />
+              <MovieList movieType={request?.fetchUpcoming} blockTitle="Soon Add" slideNum={4}/>
+              <MovieList movieType={request?.fetchRomanceMovies} blockTitle="Romance Movies" bgImage={Img} slideNum={3} large pl370 dark/>
+              <MovieList movieType={request?.fetchDocumentaries} blockTitle="Documentaries Movies" slideNum={4}/>
+              <MovieList movieType={request?.fetchHorrorMovies} blockTitle="New Episodes" bgImage={demonslayerIMG} slideNum={3} large pl370 whiteTxt/>
+              <Popular />
+              <MovieList movieType={request?.fetchUpcoming} blockTitle="Horror Movies" bgImage={banner2} slideNum={4} large/>
+              <MovieList movieType={request?.fetchComedyMovies} blockTitle="Comedy Movies" slideNum={4}/>
+            </section>
+            <Footer/>
+          </Route> */}
+        </Switch>
+      </Router>
+    </main>
   );
 }
 
