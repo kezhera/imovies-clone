@@ -4,7 +4,7 @@ import { GreenBtn, MovieSection__Wrapper } from './MovieSection.style'
 import axios from '../../axios';
 import MovieItem from '../MovieItem/MovieItem';
 import BlockTitle from '../BlockTitle';
-const MovieSection = ({movieType , numberMovies}) => {
+const MovieSection = ({movieType , numberMovies , blockTitle}) => {
 
     const [movies, setMovies] = useState([])
     const [numMovies, setNumMovies] = useState(numberMovies)
@@ -24,7 +24,7 @@ const MovieSection = ({movieType , numberMovies}) => {
             <Container>
                 <Row>
                     <Col lg={12}>
-                        <BlockTitle blockTitle="Popular Films"/>
+                        <BlockTitle blockTitle={blockTitle}/>
                     </Col>
                     {
                         movies.slice( 0 , numMovies).map( (movie) =>

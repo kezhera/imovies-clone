@@ -6,18 +6,6 @@ import { HeaderWrapper , HeaderLeft, HeaderMenu, HeaderSearch, HeaderSearchInput
 
 const Header = () => {
 
-    // const [movies, setMovies] = useState([])
-
-    // useEffect( () => {
-    //     async function fetchData() {
-    //         const requests = await axios.get(request?.searchMovies);
-    //         setMovies(requests.data.results)
-    //         return requests;
-    //         console.log(requests)
-    //     }
-    //     fetchData();
-    // } , [] );
-    
     return (
         <HeaderWrapper>
             <Container>
