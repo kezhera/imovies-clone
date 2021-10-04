@@ -21,9 +21,9 @@ const Search = () => {
     //     fetchData();
     // } , [value] );
 
-    const inputChange = (e) => {
-        setValue(e.target.value);
-        value.length > 0 ? setVisible(true) : setVisible(false)
+    const inputChange = (text) => {
+        text.length == 0 ? setValue('') : setValue(text);
+        text.length > 0 ? setVisible(true) : setVisible(false)
     }
 
     const closeSearch = () => {
@@ -36,7 +36,7 @@ const Search = () => {
     return (
         <React.Fragment>
             <HeaderSearch>
-                <HeaderSearchInput placeholder="Search" value={value} onChange={inputChange} />
+                <HeaderSearchInput placeholder="Search" value={value} onChange={ e => inputChange(e.target.value)} />
                 <HeaderSearchBtn type="submit"/>
             </HeaderSearch>
             { visible && <SeachWrapper className={`${visible && 'visible' }`}>
