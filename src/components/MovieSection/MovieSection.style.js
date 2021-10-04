@@ -15,7 +15,7 @@ export const GreenBtn = styled.button`
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 20px auto 0px;
+    margin: 0px 10px;
     &:hover{
         background-color: #00755d;
     }

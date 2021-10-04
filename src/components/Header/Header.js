@@ -2,8 +2,9 @@ import React from 'react'
 import { Container, Row } from 'react-bootstrap'
 import DropdownComp from '../DropdownComp'
 import Logo from '../Logo'
+import { GreenBtn } from '../MovieSection/MovieSection.style'
 import { HeaderWrapper , HeaderLeft, HeaderMenu,  HeaderRight } from './Header.style'
-import Search from './Search'
+import Search from '../Search'
 
 const Header = () => {
 
@@ -19,8 +20,11 @@ const Header = () => {
                         </HeaderMenu>
                         <Logo />
                     </HeaderLeft>
+
                     <Search />
+                    
                     <HeaderRight>
+                        <GreenBtn>Login</GreenBtn>
                         <DropdownComp />
                     </HeaderRight>
                 </Row>

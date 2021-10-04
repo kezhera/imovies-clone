@@ -16,10 +16,8 @@ const MovieInner = () => {
             return requests;
         }
         fetchData();
-    } , [] );
+    } , [id] );
 
-    console.log(movie)
-    // https://api.themoviedb.org/3/movie/{movie_id}?api_key=<<api_key>>&language=en-US --> movie search by movie-id
     return (
         <Movie__wrapper>
             <Container>
@@ -39,6 +37,10 @@ const MovieInner = () => {
                                     <Movie__item>
                                         <span>Release date:</span>
                                         <span>{movie?.release_date}</span>
+                                    </Movie__item>
+                                    <Movie__item>
+                                        <span>Budget:</span>
+                                        <span>{movie?.budget}</span>
                                     </Movie__item>
                                     <Movie__item>
                                         <span>original language:</span>

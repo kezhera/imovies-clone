@@ -4,7 +4,6 @@ import { GreenBtn, MovieSection__Wrapper } from './MovieSection.style'
 import axios from '../../axios';
 import MovieItem from '../MovieItem/MovieItem';
 import BlockTitle from '../BlockTitle';
-import request from 'request';
 const MovieSection = ({movieType , numberMovies , blockTitle , showMore}) => {
 
     const [movies, setMovies] = useState([])
@@ -35,7 +34,7 @@ const MovieSection = ({movieType , numberMovies , blockTitle , showMore}) => {
                     }
                     {
                         showMore &&
-                        numMovies < movies.length && <Col lg={12}>
+                        numMovies < movies.length && <Col lg={12} className="d-flex justify-content-center mt-2">
                             <GreenBtn onClick={ () => setNumMovies(numMovies + 4)}>
                             Show More
                             </GreenBtn>

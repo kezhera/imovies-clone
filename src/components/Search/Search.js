@@ -1,7 +1,7 @@
-import React,{useEffect , useState} from 'react'
+import React,{ useState } from 'react'
 import { Container, Row } from 'react-bootstrap'
 import { HeaderSearch, HeaderSearchBtn, HeaderSearchInput , SeachWrapper ,SeachWrapper__header , SeachWrapper__input , SeachWrapper__close } from './Search.style'
-import MovieSection from '../../MovieSection/MovieSection';
+import MovieSection from '../MovieSection/MovieSection';
 
 const Search = () => {
     // https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&language=en-US&page=1&include_adult=false
