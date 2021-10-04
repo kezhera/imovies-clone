@@ -1,8 +1,6 @@
 import React,{useEffect , useState} from 'react'
 import { Container, Row } from 'react-bootstrap'
 import { HeaderSearch, HeaderSearchBtn, HeaderSearchInput , SeachWrapper ,SeachWrapper__header , SeachWrapper__input , SeachWrapper__close } from './Search.style'
-import axios from '../../../axios';
-import BlockTitle from '../../BlockTitle';
 import MovieSection from '../../MovieSection/MovieSection';
 
 const Search = () => {
@@ -12,14 +10,6 @@ const Search = () => {
     const [value, setValue] = useState('');
     const [visible, setVisible] = useState(false);
     const [page, setPage] = useState(1);
-
-    // useEffect( () => {
-    //     async function fetchData() {
-    //         const requests = await axios.get(`/search/multi?api_key=${API_KEY}&language=en-US&page=${page}&include_adult=false&query=${value}`);
-    //         console.log(requests);
-    //     }
-    //     fetchData();
-    // } , [value] );
 
     const inputChange = (text) => {
         text.length == 0 ? setValue('') : setValue(text);
@@ -36,14 +26,23 @@ const Search = () => {
     return (
         <React.Fragment>
             <HeaderSearch>
-                <HeaderSearchInput placeholder="Search" value={value} onChange={ e => inputChange(e.target.value)} />
+                <HeaderSearchInput 
+                    placeholder="Search" 
+                    value={value} 
+                    onChange={ e => inputChange(e.target.value)}
+                />
                 <HeaderSearchBtn type="submit"/>
             </HeaderSearch>
             { visible && <SeachWrapper className={`${visible && 'visible' }`}>
                 <Container>
                     <Row>
                         <SeachWrapper__header>
-                            <SeachWrapper__input type="text" placeholder="search movie" value={value} onChange={inputChange} />
+                            <SeachWrapper__input 
+                                type="text" 
+                                placeholder="search movie" 
+                                value={value} 
+                                onChange={e => inputChange(e.target.value)}
+                            />
                             <div className="frame">
                                 <SeachWrapper__close 
                                     src="./img/close.svg"
@@ -51,7 +50,11 @@ const Search = () => {
                                 />
                             </div>
                         </SeachWrapper__header>
-                        <MovieSection blockTitle="Movies" numberMovies={12} movieType={`/search/multi?api_key=${API_KEY}&language=en-US&page=${page}&include_adult=false&query=${value}`}/>
+                        <MovieSection 
+                            blockTitle="Movies" 
+                            numberMovies={12} 
+                            movieType={`/search/multi?api_key=${API_KEY}&language=en-US&page=${page}&include_adult=false&query=${value}`}
+                        />
                     </Row>
                 </Container>
             </SeachWrapper>

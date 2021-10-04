@@ -46,7 +46,7 @@ export const Movie__item = styled.li`
 
 export const Movie__desc = styled.p`
     color: #828282;
-    max-width: 600px;
+    max-width: 80%;
     margin: 20px 0px;
 
 `

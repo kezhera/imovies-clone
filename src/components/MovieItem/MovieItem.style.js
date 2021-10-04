@@ -51,6 +51,7 @@ export const MovieList__bottom = styled.footer`
     padding-left: 10px;
     margin-top: -5px;
     padding-top: 5px;
+    padding-bottom: 5px;
 `
 
 export const MovieList__title = styled.h2`
