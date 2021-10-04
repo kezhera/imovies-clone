@@ -6,7 +6,7 @@ const Movies = () => {
     return (
         <>
             <Header />
-            <MovieSection movieType={request?.fetchUpcoming} numberMovies={20} blockTitle="Movies" />
+            <MovieSection movieType={request?.fetchUpcoming} numberMovies={20} blockTitle="Movies" showMore />
         </>
     )
 }

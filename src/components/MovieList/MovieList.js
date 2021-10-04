@@ -55,7 +55,7 @@ const MovieList = ({ slideNum , movieType , blockTitle , bgImage , large , dark}
             <Container>
                 <Row className="justify-content-end">
                     <BlockTitle blockTitle={blockTitle} slideNum={slideNum} dark={ dark ? true : false }/>
-                    <Slider {...settings} className={` ${slideNum == 3 ? 'w-75' : 'w-100'} `}>
+                    <Slider {...settings} className={` ${slideNum === 3 ? 'w-75' : 'w-100'} `}>
                         {
                             movies.map( (movie) => 
                                 <div className="item">

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MovieList__Wrapper = styled.section`
     background-image: url('${ props => props.bgImage }');
-    margin-bottom: 15px;
+    padding-bottom: 15px;
     .item{
         height: 210px;
     }

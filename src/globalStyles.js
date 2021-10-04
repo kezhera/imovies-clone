@@ -28,6 +28,9 @@ export const GlobalStyle = createGlobalStyle`
     }
     body{
         background-color: #1d1d1d;
+        &.no-scroll{
+            overflow: hidden;
+        }
     }
     .container{
         max-width: 1400px;

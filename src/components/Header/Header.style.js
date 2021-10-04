@@ -43,27 +43,4 @@ export const HeaderMenu = styled.div`
     .line:nth-child(3) {
         top: 100%;
     }
-` 
-export const HeaderSearch = styled.div`
-    width: 48%;
-    height: 38px;
-    form{
-        width: 100%;
-        height: 100%;
-    }
-    `
-export const HeaderSearchInput = styled.input`
-    padding-left: 10px;
-    width: 100%;
-    height: 100%;
-    background: #3c3c3c;
-    border: 0;
-    color: #bbb;
-    border: 2px solid #404040;
-    &::placeholder{
-        color: #bbb;
-    }
-`
-export const HeaderSearchBtn = styled.button`
-    display: none;
 `

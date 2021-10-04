@@ -3,7 +3,9 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
+import Header from "./components/Header";
 import Home from "./pages/Home";
+import Movie from "./pages/Movie/Movie";
 import Movies from "./pages/Movies/Movies";
 
 function App() {
@@ -16,6 +18,9 @@ function App() {
           </Route>
           <Route path="/movies">
             <Movies />
+          </Route>
+          <Route path="/:id">
+            <Movie />
           </Route>
         </Switch>
       </Router>

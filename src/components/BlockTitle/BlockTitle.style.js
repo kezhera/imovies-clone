@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 export const BlockTitle__Wrapper = styled.div`
@@ -10,10 +11,11 @@ export const BlockTitle__Wrapper = styled.div`
     }
 `;
 
-export const SeeAll = styled.a`
+export const SeeAll = styled(Link)`
     font-size: 14px;
-    color: #676767;
+    color: #fff;
     transition: 0.2s;
+    margin-top: 2px;
 `
 
 export const BlockTitle__main = styled.h2`

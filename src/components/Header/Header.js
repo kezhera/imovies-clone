@@ -2,7 +2,8 @@ import React from 'react'
 import { Container, Row } from 'react-bootstrap'
 import DropdownComp from '../DropdownComp'
 import Logo from '../Logo'
-import { HeaderWrapper , HeaderLeft, HeaderMenu, HeaderSearch, HeaderSearchInput, HeaderSearchBtn , HeaderRight } from './Header.style'
+import { HeaderWrapper , HeaderLeft, HeaderMenu,  HeaderRight } from './Header.style'
+import Search from './Search'
 
 const Header = () => {
 
@@ -18,12 +19,7 @@ const Header = () => {
                         </HeaderMenu>
                         <Logo />
                     </HeaderLeft>
-                    <HeaderSearch>
-                        <form action="" method="">
-                            <HeaderSearchInput placeholder="Search"/>
-                            <HeaderSearchBtn type="submit"/>
-                        </form>
-                    </HeaderSearch>
+                    <Search />
                     <HeaderRight>
                         <DropdownComp />
                     </HeaderRight>

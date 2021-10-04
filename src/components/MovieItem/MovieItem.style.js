@@ -34,8 +34,15 @@ export const MovieList__top = styled.header`
         height: 100%;
         transition: 0.2s;
     }
+    a{
+        width: 100%;
+        height: 100%;
+        display: block;
+        z-index: 1;
+    }
     img{
         width: 100%;
+        height: 170px;
         object-fit: cover;
     }
 `
