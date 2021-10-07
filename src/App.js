@@ -22,6 +22,11 @@ function App() {
           <Route path="/:id">
             <Movie />
           </Route>
+
+          {/*404 page */}
+          {/* <Route path="*">
+            <NoMatch />
+          </Route> */}
         </Switch>
       </Router>
     </main>

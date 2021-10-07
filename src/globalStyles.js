@@ -25,6 +25,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0px;
         color: #e2e2e2;
         font-family: main;
+        font-weight: 400;
     }
     body{
         background-color: #1d1d1d;
