@@ -35,6 +35,7 @@ const Header = () => {
                     </Row>
                 </Container>
             </HeaderWrapper>
+            
             <Sidebar active={sidebar} />
         </>
     )

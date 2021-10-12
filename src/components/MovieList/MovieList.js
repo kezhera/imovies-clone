@@ -58,7 +58,7 @@ const MovieList = ({ slideNum , movieType , blockTitle , bgImage , large , dark}
                     <Slider {...settings} className={` ${slideNum === 3 ? 'w-75' : 'w-100'} `}>
                         {
                             movies.map( (movie) => 
-                                <div className="item">
+                                <div className="item" key={movie?.id}>
                                     <MovieItem movie={movie} dark={ dark ? true : false }/>
                                 </div>
                             )

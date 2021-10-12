@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const MovieSection__Wrapper = styled.section`
     padding-bottom: 15px;
+    width: 100%;
 `;
 
 export const GreenBtn = styled.button`

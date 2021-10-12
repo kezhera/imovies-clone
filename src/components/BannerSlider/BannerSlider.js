@@ -42,7 +42,7 @@ const BannerSlider = () => {
             <Slider {...settings}>
                 {
                     bannerMovies.map( (movie) =>
-                            <div>
+                            <div key={movie?.id}>
                                 <BannerItem backgroundImg={`url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`} >
                                     <BannerContent>
                                         <BannerTitle>{movie?.title || movie?.name || movie?.original_title}</BannerTitle>

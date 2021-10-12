@@ -49,7 +49,7 @@ const MovieInner = () => {
                                     <Movie__item>
                                         <span>Genres:</span>
                                         {
-                                            movie?.genres?.map( (genre) => <span>{genre.name}   </span> )
+                                            movie?.genres?.map( (genre) => <span>{genre.name}, </span> )
                                         }
                                         
                                     </Movie__item>
